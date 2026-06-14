@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lámina Anatómica: Aorta Posterior Comparada</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f6f9; color: #333; margin: 0; padding: 20px; }
+        .lamina { max-width: 1200px; margin: 0 auto; background: white; border: 4px solid #2c3e50; border-radius: 10px; padding: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h1 { text-align: center; color: #c0392b; text-transform: uppercase; margin-bottom: 5px; font-size: 2.5em; letter-spacing: 1px; }
+        h2 { text-align: center; color: #2c3e50; margin-top: 0; font-weight: 400; font-size: 1.2em; border-bottom: 2px solid #aec6cf; padding-bottom: 15px; }
+        
+        .introduccion { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; background: #fdf2e9; padding: 15px; border-radius: 8px; border-left: 5px solid #e67e22; margin-bottom: 30px; }
+        @media (max-width: 768px) { .introduccion { grid-template-columns: 1fr; } }
+        .introduccion p { margin: 5px 0; font-size: 0.95em; }
+
+        .grid-especies { display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px; margin-bottom: 30px; }
+        @media (max-width: 900px) { .grid-especies { grid-template-columns: 1fr; } }
+        
+        .card-especie { border: 2px solid #bdc3c7; border-radius: 8px; padding: 20px; background: #fff; position: relative; }
+        .card-especie.equino { border-color: #b87333; }
+        .card-especie.bovino { border-color: #27ae60; }
+        .card-especie.porcino { border-color: #f1948a; }
+        .card-especie.ave { border-color: #2980b9; }
+        
+        .badge { position: absolute; top: 15px; right: 20px; font-weight: bold; text-transform: uppercase; font-size: 0.85em; padding: 5px 10px; border-radius: 4px; color: white; }
+        .equino .badge { background: #b87333; }
+        .bovino .badge { background: #27ae60; }
+        .porcino .badge { background: #f1948a; }
+        .ave .badge { background: #2980b9; }
+
+        .card-especie h3 { margin-top: 0; color: #2c3e50; border-bottom: 1px solid #eee; padding-bottom: 8px; font-size: 1.4em; }
+        .detalles { font-size: 0.9em; margin-bottom: 15px; line-height: 1.4; }
+        
+        .lista-ramas { background: #f8f9fa; padding: 12px 15px 12px 30px; border-radius: 6px; font-size: 0.9em; height: 240px; overflow-y: auto; border: 1px solid #e2e8f0; }
+        .lista-ramas li { margin-bottom: 5px; }
+        .lista-ramas strong { color: #c0392b; }
+
+        .contenedor-tabla { overflow-x: auto; margin-top: 20px; }
+        .tabla-comparativa { width: 100%; border-collapse: collapse; font-size: 0.9em; min-width: 600px; }
+        .tabla-comparativa th { background-color: #2c3e50; color: white; padding: 12px; text-align: left; }
+        .tabla-comparativa td { padding: 10px; border: 1px solid #dee2e6; }
+        .tabla-comparativa tr:nth-child(even) { background-color: #f8f9fa; }
+        
+        .seccion-titulo { background: #2c3e50; color: white; padding: 8px 15px; border-radius: 4px; margin-top: 30px; margin-bottom: 15px; font-size: 1.1em; text-transform: uppercase; letter-spacing: 0.5px; }
+        .esquema-ave-arco { background: #ebf5fb; border: 1px dashed #2980b9; padding: 10px; border-radius: 6px; margin-top: 10px; font-size: 0.85em; }
+    </style>
+</head>
+<body>
+
+<div class="lamina">
+    <h1>Aorta Posterior (Descendente)</h1>
+    <h2>Anatomía Veterinaria Comparada: Equino, Bovino, Porcino y Aves</h2>
+
+    <div class="introduccion">
+        <div>
+            <p><strong>¿De dónde viene? (Origen):</strong> Es la continuación directa del <strong>Arco Aórtico</strong> a nivel de la 4ª vértebra torácica (luego de emitir las ramas braquiocefálicas).</p>
+            <p><strong>¿A dónde va? (Destino):</strong> Recorre longitudinalmente el techo de las cavidades torácica y abdominal, distribuyendo sangre oxigenada a vísceras, pelvis y miembros posteriores.</p>
+        </div>
+        <div>
+            <p><strong>Partes que la conforman:</strong><br>
+                1. <em>Aorta Torácica:</em> Desde el arco hasta el diafragma (hiato aórtico).<br>
+                2. <em>Aorta Abdominal:</em> Desde el diafragma hasta su ramificación ilíaca terminal en la pelvis.
+            </p>
+        </div>
+    </div>
+
+    <div class="grid-especies">
+        <div class="card-especie equino">
+            <span class="badge">Equino</span>
+            <h3>Caballo</h3>
+            <div class="detalles">
+                <strong>Ubicación:</strong> Discurre ventral a la columna vertebral. El arco gira a la izquierda.<br>
+                <strong>Característica clave:</strong> Posee un tronco braquiocefálico único y muy largo que nace antes de la aorta posterior.
+            </div>
+            <ol class="lista-ramas">
+                <li><strong>Arterias intercostales dorsales:</strong> Segmentarias para la pared costal.</li>
+                <li><strong>Arterias lumbares:</strong> Irrigan la musculatura superior del lomo.</li>
+                <li><strong>Tronco Celíaco:</strong> (Impar) Ramas Hepática, Gástrica y Esplénica.</li>
+                <li><strong>Arteria Mesentérica Craneal:</strong> (Impar) Gran desarrollo para el intestino grueso/ciego.</li>
+                <li><strong>Arterias Renales:</strong> (Pares) Directo a ambos riñones.</li>
+                <li><strong>Arterias Gonadales:</strong> Testiculares u ováricas según el sexo.</li>
+                <li><strong>Arteria Mesentérica Caudal:</strong> (Impar) Pequeña, irriga colon menor y recto.</li>
+                <li><strong>Arterias Ilíacas Externas:</strong> Grandes, originan la arteria femoral (miembro posterior).</li>
+                <li><strong>Arterias Ilíacas Internas:</strong> Distribución en paredes y vísceras pélvicas.</li>
+                <li><strong>Arteria Sacra Media:</strong> Continuación terminal delgada hacia la cola.</li>
+            </ol>
+        </div>
+
+        <div class="card-especie bovino">
+            <span class="badge">Bovino</span>
+            <h3>Vaca / Toro</h3>
+            <div class="detalles">
+                <strong>Ubicación:</strong> Posición medial-ventral muy firme bajo los cuerpos vertebrales.<br>
+                <strong>Característica clave:</strong> El Tronco Celíaco y la Mesentérica Craneal son masivos para suplir el enorme sistema de estómagos (rumen).
+            </div>
+            <ol class="lista-ramas">
+                <li><strong>Arterias intercostales dorsales:</strong> Distribución torácica regular.</li>
+                <li><strong>Arterias lumbares:</strong> Pared abdominal dorsal.</li>
+                <li><strong>Tronco Celíaco:</strong> Enorme volumen. Ramas para los 4 compartimentos estomacales.</li>
+                <li><strong>Arteria Mesentérica Craneal:</strong> Irriga asas intestinales dispuestas en disco.</li>
+                <li><strong>Arterias Renales:</strong> Vasos tortuosos adaptados a riñones lobulados.</li>
+                <li><strong>Arterias Gonadales:</strong> Ramas uterinas de gran calibre en hembras.</li>
+                <li><strong>Arteria Mesentérica Caudal:</strong> Terminal del colon.</li>
+                <li><strong>Arterias Ilíacas Externas:</strong> Dirigidas al miembro posterior y ubre (mamaria craneal).</li>
+                <li><strong>Arterias Ilíacas Internas:</strong> Muy profundas en el suelo pélvico.</li>
+                <li><strong>Arteria Sacra Media:</strong> Prolongación hacia las vértebras coccígeas.</li>
+            </ol>
+        </div>
+
+        <div class="card-especie porcino">
+            <span class="badge">Porcino</span>
+            <h3>Cerdo</h3>
+            <div class="detalles">
+                <strong>Ubicación:</strong> Envuelta en abundante tejido conectivo y graso retroperitoneal.<br>
+                <strong>Característica clave:</strong> Mayor simetría en las salidas de las ramas parietales; la subclavia izquierda a veces es semi-independiente.
+            </div>
+            <ol class="lista-ramas">
+                <li><strong>Arterias intercostales:</strong> Nacen simétricamente de la porción torácica.</li>
+                <li><strong>Arterias lumbares:</strong> Irrigan la región lumbar.</li>
+                <li><strong>Tronco Celíaco:</strong> Irriga estómago simple, bazo alargado e hígado.</li>
+                <li><strong>Arteria Mesentérica Craneal:</strong> Abundantes ramas yeyunales.</li>
+                <li><strong>Arterias Renales:</strong> Riñones situados casi al mismo nivel (no asimétricos).</li>
+                <li><strong>Arterias Gonadales:</strong> Trayecto directo hacia la región inguinal.</li>
+                <li><strong>Arteria Mesentérica Caudal:</strong> Telas del colon espiral terminal.</li>
+                <li><strong>Arterias Ilíacas Externas:</strong> Distribución para los miembros posteriores.</li>
+                <li><strong>Arterias Ilíacas Internas:</strong> Distribución pélvica estándar.</li>
+                <li><strong>Arteria Sacra Media:</strong> Pequeña rama caudal terminal.</li>
+            </ol>
+        </div>
+
+        <div class="card-especie ave">
+            <span class="badge">Aves</span>
+            <h3>Gallina / Ave</h3>
+            <div class="detalles">
+                <strong>Ubicación:</strong> Aorta Dorsal pegada al sinsacro. <strong>¡El arco aórtico gira a la DERECHA!</strong><br>
+                <strong>Característica clave:</strong> Dos troncos braquiocefálicos. La arteria principal de la pata es la <em>Isquiática</em>, no la femoral.
+            </div>
+            <ol class="lista-ramas">
+                <li><strong>Troncos Braquiocefálicos (D e I):</strong> Nacen del arco (Cabeza y alas).</li>
+                <li><strong>Arterias Intercostales:</strong> Ramas segmentarias reducidas.</li>
+                <li><strong>Arteria Celíaca:</strong> Distribución en proventrículo, molleja e hígado.</li>
+                <li><strong>Arteria Mesentérica Craneal:</strong> Irriga las asas intestinales y ciegos dobles.</li>
+                <li><strong>Arterias Renales Craneales:</strong> Irrigan el lóbulo anterior del riñón aviar.</li>
+                <li><strong>Arterias Femorales:</strong> Pequeñas, van solo a la musculatura del muslo anterior.</li>
+                <li><strong>Arterias Renales Medias y Caudales:</strong> Para los lóbulos renales restantes.</li>
+                <li><strong>Arterias Isquiáticas (Pares):</strong> La rama más grande; principal irrigación de toda la pata.</li>
+                <li><strong>Arteria Mesentérica Caudal:</strong> Conexión con el intestino posterior y cloaca.</li>
+                <li><strong>Arteria Caudal Interna:</strong> Terminal hacia las plumas rectrices de la cola.</li>
+            </ol>
+            <div class="esquema-ave-arco">
+                <strong>Diferencia Crítica de Aves:</strong> El arco aórtico izquierdo se atrofia en el embrión. El arco derecho es el funcional y sistémico.
+            </div>
+        </div>
+    </div>
+
+    <div class="seccion-titulo">Tabla Resumen de Diagnóstico Diferencial</div>
+    <div class="contenedor-tabla">
+        <table class="tabla-comparativa">
+            <thead>
+                <tr>
+                    <th>Criterio Anatómico</th>
+                    <th>Equino (Caballo)</th>
+                    <th>Bovino (Vaca)</th>
+                    <th>Porcino (Cerdo)</th>
+                    <th>Aves (Gallina)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Dirección del Arco</strong></td>
+                    <td>Izquierda</td>
+                    <td>Izquierda</td>
+                    <td>Izquierda</td>
+                    <td><strong>Derecha</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>Arteria Principal de la Pata</strong></td>
+                    <td>Femoral (vía Ilíaca Externa)</td>
+                    <td>Femoral (vía Ilíaca Externa)</td>
+                    <td>Femoral (vía Ilíaca Externa)</td>
+                    <td><strong>Isquiática</strong> (Pasa por el isquion)</td>
+                </tr>
+                <tr>
+                    <td><strong>Troncos Braquiocefálicos</strong></td>
+                    <td>Uno solo, muy largo</td>
+                    <td>Uno solo, ancho</td>
+                    <td>Uno solo</td>
+                    <td><strong>Doble (Izquierdo y Derecho)</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>Terminación Caudal</strong></td>
+                    <td>Trifurcación nítida</td>
+                    <td>Cuadrifurcación compacta</td>
+                    <td>Trifurcación estándar</td>
+                    <td>Arteria Mesentérica Caudal y Caudal</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
