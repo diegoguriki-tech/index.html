@@ -67,7 +67,7 @@
         .flip-card {
             background-color: transparent;
             width: 100%;
-            height: 520px;
+            height: 540px;
             perspective: 1000px;
             cursor: pointer;
         }
@@ -130,13 +130,13 @@
         }
         .animal-title { margin: 0 0 10px 0; color: var(--primary); font-size: 1.4em; border-bottom: 1px solid #eee; padding-bottom: 5px; }
         
-        /* Contenedor del Diagrama Autogenerado */
+        /* Contenedor del Diagrama Vectorial de la Aorta */
         .img-container {
-            height: 240px;
+            height: 250px;
             display: flex;
             justify-content: center;
             align-items: center;
-            background: #fdfefe;
+            background: #ffffff;
             border-radius: 6px;
             margin-bottom: 12px;
             overflow: hidden;
@@ -186,4 +186,297 @@
 </head>
 <body>
 
-<div class="
+<div class="lamina">
+    <h1>Aorta Posterior (Descendente)</h1>
+    <h2>Esquemas Anatómicos y Distribución Vascular Comparada</h2>
+
+    <div class="introduccion">
+        <div>
+            <p><strong>Origen Anatómico:</strong> Es la prolongación directa del <strong>Arco Aórtico</strong> a partir de la 4ª vértebra torácica, después de la salida de los grandes troncos arteriales que van hacia los miembros anteriores y la cabeza.</p>
+        </div>
+        <div>
+            <p><strong>Divisiones Principales:</strong><br>
+                1. <em>Porción Torácica:</em> Recorrido mediastínico que emite ramas parietales y viscerales broncoesofágicas.<br>
+                2. <em>Porción Abdominal:</em> Cruza el diafragma e irriga el tracto gastrointestinal, renal y genital.
+            </p>
+        </div>
+    </div>
+
+    <div class="instruccion">💡 Pasa el cursor sobre las tarjetas (o tócalas) para girarlas en 3D y ver la lista de ramas arteriales de cada espécimen</div>
+
+    <div class="grid-especies">
+        
+        <!-- EQUINO -->
+        <div class="flip-card equino" onclick="this.classList.toggle('active')">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <span class="badge">Equino</span>
+                    <h3 class="animal-title">Caballo (Equus caballus)</h3>
+                    <div class="img-container">
+                        <!-- DIAGRAMA VECTORIAL AORTA EQUINO -->
+                        <svg viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="320" height="240" fill="#fdfaf6"/>
+                            <!-- Techo vertebral -->
+                            <line x1="20" y1="35" x2="300" y2="35" stroke="#bdc3c7" stroke-width="4" stroke-dasharray="4,3"/>
+                            
+                            <!-- Cayo de la Aorta -->
+                            <path d="M45,150 C30,70 80,60 100,80" fill="none" stroke="#e74c3c" stroke-width="8" stroke-linecap="round"/>
+                            <text x="15" y="170" font-size="9" fill="#e74c3c" font-weight="bold">Arco Aórtico (Izq)</text>
+                            
+                            <!-- Cuerpo Aorta Descendente -->
+                            <line x1="100" y1="80" x2="260" y2="80" stroke="#e74c3c" stroke-width="6"/>
+                            
+                            <!-- Tronco Celíaco Trifurcado -->
+                            <path d="M130,80 L115,120 M130,80 L130,125 M130,80 L148,118" stroke="#d35400" stroke-width="3" stroke-linecap="round"/>
+                            <circle cx="130" cy="80" r="4" fill="#d35400"/>
+                            <text x="85" y="140" font-size="9" fill="#d35400" font-weight="bold">T. Celíaco</text>
+                            
+                            <!-- Mesentérica Craneal muy gruesa -->
+                            <path d="M165,80 Q170,125 185,160" fill="none" stroke="#c0392b" stroke-width="5" stroke-linecap="round"/>
+                            <text x="180" y="135" font-size="9" fill="#c0392b" font-weight="bold">A. Mesentérica Cran.</text>
+                            
+                            <!-- Renales asimétricas -->
+                            <line x1="195" y1="80" x2="195" y2="105" stroke="#e74c3c" stroke-width="2.5"/>
+                            <line x1="215" y1="80" x2="215" y2="110" stroke="#e74c3c" stroke-width="2.5"/>
+                            <text x="195" y="70" font-size="8" fill="#7f8c8d">Aa. Renales</text>
+                            
+                            <!-- Terminales -->
+                            <path d="M260,80 L295,115 M260,80 L300,85" stroke="#e74c3c" stroke-width="4.5" stroke-linecap="round"/>
+                            <text x="255" y="130" font-size="9" fill="#2c3e50">Aa. Ilíacas</text>
+                        </svg>
+                    </div>
+                    <div class="detalles">
+                        <strong>Particularidad:</strong> Gran desarrollo elástico en la porción torácica. La aorta abdominal corre firmemente unida a la superficie ventral de las vértebras lumbares, cargada a la izquierda.
+                    </div>
+                    <div class="btn-ver-ramas">Voltear para ver Ramas 🔄</div>
+                </div>
+                <div class="flip-card-back">
+                    <h4 class="back-title">Ramas de la Aorta Abdominal (Equino)</h4>
+                    <ol class="lista-ramas">
+                        <li>Arterias intercostales dorsales y lumbares</li>
+                        <li><strong>Tronco Celíaco:</strong> Se divide de forma trifurcada nítida (Gástrica izquierda, Hepática y Esplénica).</li>
+                        <li><strong>Arteria Mesentérica Craneal:</strong> Enorme calibre (irriga el gran colon equino).</li>
+                        <li>Arterias Renales (Derecha más craneal).</li>
+                        <li>Arterias Gonadales (Arterias testiculares o uterinas ováricas).</li>
+                        <li>Arteria Mesentérica Caudal.</li>
+                        <li>Arterias Ilíacas Externas (Eje del miembro posterior).</li>
+                        <li>Arterias Ilíacas Internas y Sacra Media.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- BOVINO -->
+        <div class="flip-card bovino" onclick="this.classList.toggle('active')">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <span class="badge">Bovino</span>
+                    <h3 class="animal-title">Rumiantes (Bos taurus)</h3>
+                    <div class="img-container">
+                        <!-- DIAGRAMA VECTORIAL AORTA BOVINO -->
+                        <svg viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="320" height="240" fill="#f5faf6"/>
+                            
+                            <!-- Eje de la Aorta -->
+                            <line x1="30" y1="70" x2="260" y2="70" stroke="#e74c3c" stroke-width="6" stroke-linecap="round"/>
+                            <text x="40" y="55" font-size="10" fill="#2c3e50" font-weight="bold">Aorta Abdominal</text>
+                            
+                            <!-- Ramas Ruminales Complejas -->
+                            <path d="M110,70 Q95,115 115,155 M110,70 Q115,125 145,160 M110,70 Q130,100 160,115" fill="none" stroke="#27ae60" stroke-width="3" stroke-linecap="round"/>
+                            <circle cx="110" cy="70" r="4.5" fill="#27ae60"/>
+                            
+                            <!-- Silueta Rumen -->
+                            <ellipse cx="135" cy="150" rx="40" ry="25" fill="none" stroke="#27ae60" stroke-width="1.5" stroke-dasharray="4,2"/>
+                            <text x="115" y="153" font-size="9" fill="#27ae60" font-weight="bold">Rumen / Estómago</text>
+                            <text x="135" y="95" font-size="9" fill="#27ae60">Ramas Gástricas Múltiples</text>
+                            
+                            <!-- Mesentérica Craneal -->
+                            <path d="M175,70 C185,100 205,125 225,135" fill="none" stroke="#e74c3c" stroke-width="3.5"/>
+                            <text x="185" y="60" font-size="8" fill="#7f8c8d">A. Mesentérica Cran.</text>
+                            
+                            <!-- Terminales -->
+                            <path d="M260,70 L295,105 M260,70 L300,75" stroke="#e74c3c" stroke-width="4.5"/>
+                        </svg>
+                    </div>
+                    <div class="detalles">
+                        <strong>Particularidad:</strong> El Tronco Celíaco posee modificaciones de ramificación masivas (Ramas ruminales derechas e izquierdas, reticulares y omasofias) para dar soporte al complejo gástrico de cuatro compartimentos.
+                    </div>
+                    <div class="btn-ver-ramas">Voltear para ver Ramas 🔄</div>
+                </div>
+                <div class="flip-card-back">
+                    <h4 class="back-title">Ramas de la Aorta Abdominal (Bovino)</h4>
+                    <ol class="lista-ramas">
+                        <li>Ramas parietales lumbares</li>
+                        <li><strong>Tronco Celíaco Ruminal:</strong> Modificado para irrigar Rumen, Retículo, Omaso y Abomaso.</li>
+                        <li><strong>Arteria Mesentérica Craneal:</strong> Distribución en forma de abanico para el disco intestinal.</li>
+                        <li>Arterias Renales (Destinadas a riñones lobulados y asimétricos).</li>
+                        <li>Arterias Gonadales (Muy sinuosas y flexuosas).</li>
+                        <li>Arteria Mesentérica Caudal.</li>
+                        <li>Arterias Ilíacas Externas e Internas.</li>
+                        <li>Arteria Sacra Media (Prolongada hacia el plano coxígeo).</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- PORCINO -->
+        <div class="flip-card porcino" onclick="this.classList.toggle('active')">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <span class="badge">Porcino</span>
+                    <h3 class="animal-title">Cerdo (Sus scrofa)</h3>
+                    <div class="img-container">
+                        <!-- DIAGRAMA VECTORIAL AORTA PORCINO -->
+                        <svg viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="320" height="240" fill="#faf5fa"/>
+                            
+                            <!-- Eje central de la Aorta -->
+                            <line x1="30" y1="80" x2="260" y2="80" stroke="#e74c3c" stroke-width="6" stroke-linecap="round"/>
+                            <text x="40" y="65" font-size="10" fill="#2c3e50" font-weight="bold">Aorta Abdominal Recta</text>
+                            
+                            <!-- ARTERIAS RENALES TOTALMENTE SIMÉTRICAS (CRÍTICO) -->
+                            <line x1="150" y1="80" x2="120" y2="135" stroke="#9b59b6" stroke-width="4" stroke-linecap="round"/>
+                            <line x1="150" y1="80" x2="180" y2="135" stroke="#9b59b6" stroke-width="4" stroke-linecap="round"/>
+                            
+                            <!-- Riñones paralelos -->
+                            <rect x="95" y="135" width="40" height="22" rx="6" fill="#9b59b6" opacity="0.9"/>
+                            <rect x="165" y="135" width="40" height="22" rx="6" fill="#9b59b6" opacity="0.9"/>
+                            <text x="103" y="149" font-size="8" fill="white" font-weight="bold">Riñón Izq</text>
+                            <text x="173" y="149" font-size="8" fill="white" font-weight="bold">Riñón Der</text>
+                            
+                            <text x="85" y="180" font-size="11" fill="#9b59b6" font-weight="bold">Origen Renal 100% Simétrico</text>
+                            
+                            <!-- Celíaco y Mesentérica -->
+                            <line x1="85" y1="80" x2="75" y2="115" stroke="#e74c3c" stroke-width="3"/>
+                            <line x1="110" y1="80" x2="110" y2="115" stroke="#e74c3c" stroke-width="3"/>
+                            
+                            <!-- Ilíacas terminales -->
+                            <path d="M260,80 L295,115" stroke="#e74c3c" stroke-width="4.5"/>
+                        </svg>
+                    </div>
+                    <div class="detalles">
+                        <strong>Particularidad:</strong> Destaca la simetría casi exacta en el origen de las Arterias Renales izquierda y derecha debido a la posición paralela no desplazada de sus riñones, a diferencia de otras especies.
+                    </div>
+                    <div class="btn-ver-ramas">Voltear para ver Ramas 🔄</div>
+                </div>
+                <div class="flip-card-back">
+                    <h4 class="back-title">Ramas de la Aorta Abdominal (Porcino)</h4>
+                    <ol class="lista-ramas">
+                        <li>Arterias lumbares segmentarias (altamente regulares)</li>
+                        <li><strong>Tronco Celíaco:</strong> Irriga estómago simple y bazo de forma equilibrada.</li>
+                        <li>Arteria Mesentérica Craneal.</li>
+                        <li><strong>Arterias Renales Simétricas:</strong> Nacen exactamente al mismo nivel transversal.</li>
+                        <li>Arterias Gonadales.</li>
+                        <li>Arteria Mesentérica Caudal (Ramas para el colon espiral).</li>
+                        <li>Arterias Ilíacas Externas e Internas.</li>
+                        <li>Arteria Sacra Media (Terminación filiforme).</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- AVES -->
+        <div class="flip-card ave" onclick="this.classList.toggle('active')">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <span class="badge">Aves</span>
+                    <h3 class="animal-title">Aves (Gallus gallus)</h3>
+                    <div class="img-container">
+                        <!-- DIAGRAMA VECTORIAL AORTA AVES -->
+                        <svg viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="320" height="240" fill="#f5f9fc"/>
+                            
+                            <!-- ARCO AÓRTICO HACIA LA DERECHA (DEXTROAORTA) -->
+                            <path d="M55,140 C70,70 110,65 130,90" fill="none" stroke="#e74c3c" stroke-width="7" stroke-linecap="round"/>
+                            <text x="30" y="55" font-size="11" fill="#e74c3c" font-weight="bold">Arco Aórtico Derecho ➡️</text>
+                            
+                            <!-- Aorta Dorsal -->
+                            <line x1="130" y1="90" x2="280" y2="90" stroke="#e74c3c" stroke-width="5"/>
+                            <text x="145" y="80" font-size="10" fill="#2c3e50" font-weight="bold">Aorta Dorsal</text>
+                            
+                            <!-- 3 Pares de arterias renales -->
+                            <line x1="165" y1="90" x2="165" y2="120" stroke="#e74c3c" stroke-width="2"/>
+                            <line x1="190" y1="90" x2="190" y2="120" stroke="#e74c3c" stroke-width="2"/>
+                            <line x1="215" y1="90" x2="215" y2="120" stroke="#e74c3c" stroke-width="2"/>
+                            <text x="160" y="135" font-size="8" fill="#7f8c8d">3 Pares Renales independientes</text>
+                            
+                            <!-- ARTERIA ISQUIÁTICA PREDOMINANTE -->
+                            <path d="M235,90 L265,170" fill="none" stroke="#2980b9" stroke-width="5.5" stroke-linecap="round"/>
+                            <text x="175" y="185" font-size="10" fill="#2980b9" font-weight="bold">A. Isquiática Principal (Eje Pata) 🦵</text>
+                            <text x="235" y="115" font-size="7" fill="#2980b9">(No Femoral)</text>
+                        </svg>
+                    </div>
+                    <div class="detalles">
+                        <strong>¡DIFERENCIA CRÍTICA!:</strong> La aorta se denomina Aorta Dorsal. El arco aórtico funcional gira hacia el lado <strong>DERECHO</strong> (dextroaorta). Adosada firmemente bajo el hueso sinsacro.
+                    </div>
+                    <div class="btn-ver-ramas">Voltear para ver Ramas 🔄</div>
+                </div>
+                <div class="flip-card-back">
+                    <h4 class="back-title">Ramas de la Aorta Dorsal (Aves)</h4>
+                    <ol class="lista-ramas">
+                        <li><strong>Troncos Braquiocefálicos Dobles:</strong> Nacen de forma simétrica hacia las alas y cabeza.</li>
+                        <li>Arteria Celíaca (Proventrículo y molleja).</li>
+                        <li>Arteria Mesentérica Craneal.</li>
+                        <li>Arterias Renales Craneales (Para lóbulos renales anteriores).</li>
+                        <li>Arterias Femorales (De calibre muy reducido).</li>
+                        <li>Arterias Renales Medias y Caudales.</li>
+                        <li><strong>Arterias Isquiáticas:</strong> ¡El eje arterial principal de la extremidad pélvica!</li>
+                        <li>Arteria Mesentérica Caudal.</li>
+                    </ol>
+                    <div class="nota-alerta">
+                        ⚠️ <strong>Dato de Examen:</strong> En las aves, el riego principal de la pata corre por cuenta de la arteria <strong>Isquiática</strong>, no de la femoral.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="seccion-titulo">Matriz de Diagnóstico Diferencial (Anatomía Comparada)</div>
+    <div class="contenedor-tabla">
+        <table class="tabla-comparativa">
+            <thead>
+                <tr>
+                    <th>Criterio Anatómico</th>
+                    <th>Equino (Caballo)</th>
+                    <th>Bovino (Vaca)</th>
+                    <th>Porcino (Cerdo)</th>
+                    <th>Aves (Gallina)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Curvatura del Arco Aórtico</strong></td>
+                    <td>Hacia la izquierda</td>
+                    <td>Hacia la izquierda</td>
+                    <td>Hacia la izquierda</td>
+                    <td><strong style="color:var(--danger)">Hacia la derecha</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>Eje Arterial de la Pata/Miembro Caudal</strong></td>
+                    <td>Arteria Femoral</td>
+                    <td>Arteria Femoral</td>
+                    <td>Arteria Femoral</td>
+                    <td><strong style="color:var(--ave)">Arteria Isquiática</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>Disposición de Arterias Renales</strong></td>
+                    <td>Asimétrica (Derecha craneal)</td>
+                    <td>Asimétrica (Izquierda desplazada)</td>
+                    <td><strong style="color:var(--porcino)">Totalmente Simétricas</strong></td>
+                    <td>Tres pares independientes</td>
+                </tr>
+                <tr>
+                    <td><strong>Complejidad del Tronco Celíaco</strong></td>
+                    <td>Trifurcación clásica</td>
+                    <td>Masivo, ramas ruminales dominantes</td>
+                    <td>Estómago simple y bazo largo</td>
+                    <td>Ramas proventriculares y molleja</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
