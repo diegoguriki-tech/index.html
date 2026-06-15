@@ -8,14 +8,14 @@
         :root {
             --primary: #2c3e50;
             --danger: #e74c3c;
-            --equino: #b87333;
+            --equino: #d35400;
             --bovino: #27ae60;
-            --porcino: #f1948a;
+            --porcino: #9b59b6;
             --ave: #2980b9;
         }
         body { 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            background-color: #f0f2f5; 
+            background-color: #f4f6f7; 
             color: #333; 
             margin: 0; 
             padding: 20px; 
@@ -29,7 +29,7 @@
             padding: 30px; 
             box-shadow: 0 8px 25px rgba(0,0,0,0.15); 
         }
-        h1 { text-align: center; color: var(--danger); text-transform: uppercase; margin-bottom: 5px; font-size: 2.3em; letter-spacing: 1px; }
+        h1 { text-align: center; color: var(--danger); text-transform: uppercase; margin-bottom: 5px; font-size: 2.2em; letter-spacing: 1px; }
         h2 { text-align: center; color: var(--primary); margin-top: 0; font-weight: 400; font-size: 1.1em; border-bottom: 2px solid #aec6cf; padding-bottom: 15px; }
         
         .introduccion { 
@@ -40,7 +40,7 @@
             padding: 20px; 
             border-radius: 8px; 
             border-left: 5px solid #e67e22; 
-            margin-bottom: 40px; 
+            margin-bottom: 30px; 
         }
         @media (max-width: 768px) { .introduccion { grid-template-columns: 1fr; } }
         
@@ -48,15 +48,14 @@
             text-align: center;
             background: #e8f4f8;
             color: #1d6fa5;
-            padding: 10px;
+            padding: 12px;
             border-radius: 6px;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             font-weight: bold;
             font-size: 0.95em;
-            animation: pulse 2s infinite;
         }
 
-        /* Sistema de Tarjetas 3D (Flip Cards) */
+        /* Sistema de Tarjetas de Anatomía */
         .grid-especies { 
             display: grid; 
             grid-template-columns: repeat(2, 1fr); 
@@ -68,20 +67,20 @@
         .flip-card {
             background-color: transparent;
             width: 100%;
-            height: 420px;
+            height: 480px;
             perspective: 1000px;
+            cursor: pointer;
         }
         .flip-card-inner {
             position: relative;
             width: 100%;
             height: 100%;
             text-align: left;
-            transition: transform 0.8s;
+            transition: transform 0.6s;
             transform-style: preserve-3d;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             border-radius: 8px;
         }
-        /* Al pasar el mouse o hacer clic se voltea */
         .flip-card:hover .flip-card-inner, .flip-card.active .flip-card-inner {
             transform: rotateY(180deg);
         }
@@ -100,16 +99,16 @@
             border: 3px solid #bdc3c7;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
         }
         .flip-card-back {
-            background-color: #f8f9fa;
+            background-color: #fdfefe;
             transform: rotateY(180deg);
             display: flex;
             flex-direction: column;
+            border: 3px solid var(--primary);
         }
 
-        /* Variaciones de Color por Especie */
+        /* Estilos por Especie */
         .equino .flip-card-front { border-color: var(--equino); }
         .equino .badge { background: var(--equino); }
         .bovino .flip-card-front { border-color: var(--bovino); }
@@ -123,94 +122,92 @@
             align-self: flex-start;
             font-weight: bold; 
             text-transform: uppercase; 
-            font-size: 0.8em; 
-            padding: 5px 12px; 
+            font-size: 0.75em; 
+            padding: 4px 10px; 
             border-radius: 4px; 
             color: white; 
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
-        .animal-title { margin: 0 0 10px 0; color: var(--primary); font-size: 1.5em; }
+        .animal-title { margin: 0 0 10px 0; color: var(--primary); font-size: 1.4em; border-bottom: 1px solid #eee; padding-bottom: 5px; }
         
-        /* Contenedor de la Imagen */
+        /* Contenedor de Imagen Médica/Anatómica */
         .img-container {
-            height: 160px;
+            height: 220px;
             display: flex;
             justify-content: center;
             align-items: center;
-            background: #fafafa;
+            background: #ffffff;
             border-radius: 6px;
-            margin-bottom: 15px;
-            border: 1px solid #f0f0f0;
+            margin-bottom: 12px;
+            overflow: hidden;
+            border: 1px solid #e5e7eb;
         }
         .img-container img {
             max-height: 100%;
             max-width: 100%;
             object-fit: contain;
+            transition: transform 0.3s;
+        }
+        .img-container:hover img {
+            transform: scale(1.08);
         }
 
-        .detalles { font-size: 0.9em; line-height: 1.45; color: #555; }
+        .detalles { font-size: 0.88em; line-height: 1.4; color: #555; }
         .btn-ver-ramas {
             margin-top: auto;
-            background: var(--primary);
-            color: white;
+            background: #f4f6f7;
+            color: var(--primary);
             text-align: center;
-            padding: 8px;
+            padding: 6px;
             border-radius: 4px;
-            font-size: 0.85em;
+            font-size: 0.8em;
             font-weight: bold;
-            text-transform: uppercase;
+            border: 1px dashed #ccc;
         }
 
-        /* Reverso de la Tarjeta */
-        .back-title { margin: 0 0 10px 0; font-size: 1.1em; color: var(--danger); border-bottom: 2px solid #ddd; padding-bottom: 5px; }
+        /* Reverso */
+        .back-title { margin: 0 0 10px 0; font-size: 1.1em; color: var(--danger); border-bottom: 2px solid #ddd; padding-bottom: 5px; text-transform: uppercase; }
         .lista-ramas { 
             margin: 0; 
-            padding-left: 20px; 
-            font-size: 0.88em; 
+            padding-left: 18px; 
+            font-size: 0.85em; 
             overflow-y: auto; 
             flex-grow: 1;
-            line-height: 1.4;
+            line-height: 1.45;
         }
-        .lista-ramas li { margin-bottom: 4px; }
+        .lista-ramas li { margin-bottom: 3px; }
+        .lista-ramas strong { color: #2c3e50; }
 
-        /* Tabla Comparativa */
+        /* Matriz Comparativa */
         .contenedor-tabla { overflow-x: auto; margin-top: 20px; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
         .tabla-comparativa { width: 100%; border-collapse: collapse; font-size: 0.9em; min-width: 700px; }
         .tabla-comparativa th { background-color: var(--primary); color: white; padding: 12px; text-align: left; }
         .tabla-comparativa td { padding: 12px; border: 1px solid #dee2e6; }
         .tabla-comparativa tr:nth-child(even) { background-color: #f8f9fa; }
-        .tabla-comparativa tr:hover { background-color: #f1f4f6; transition: 0.2s; }
         
-        .seccion-titulo { background: var(--primary); color: white; padding: 10px 15px; border-radius: 4px; margin-top: 40px; margin-bottom: 15px; font-size: 1.1em; text-transform: uppercase; letter-spacing: 0.5px; }
-        .esquema-ave-arco { background: #ebf5fb; border: 1px dashed var(--ave); padding: 12px; border-radius: 6px; margin-top: auto; font-size: 0.85em; color: #2c3e50; }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.02); }
-            100% { transform: scale(1); }
-        }
+        .seccion-titulo { background: var(--primary); color: white; padding: 10px 15px; border-radius: 4px; margin-top: 40px; margin-bottom: 15px; font-size: 1.1em; text-transform: uppercase; font-weight: bold; }
+        .nota-alerta { background: #ebf5fb; border-left: 4px solid var(--ave); padding: 10px; border-radius: 4px; margin-top: auto; font-size: 0.8em; color: #2c3e50; }
     </style>
 </head>
 <body>
 
 <div class="lamina">
     <h1>Aorta Posterior (Descendente)</h1>
-    <h2>Anatomía Veterinaria Comparada e Interactiva</h2>
+    <h2>Esquemas Anatómicos y Distribución Vascular Comparada</h2>
 
     <div class="introduccion">
         <div>
-            <p><strong>¿De dónde viene? (Origen):</strong> Es la continuación del <strong>Arco Aórtico</strong> a nivel de la 4ª vértebra torácica, inmediatamente después de emitir los vasos hacia el cuello, cabeza y extremidades anteriores.</p>
-            <p><strong>¿A dónde va? (Destino):</strong> Transcurre de forma longitudinal bajo los cuerpos de las vértebras distribuyendo flujo de alta presión a las vísceras torácicas, abdominales, pelvis, cola y miembros posteriores.</p>
+            <p><strong>Origen Anatómico:</strong> Es la prolongación directa del <strong>Arco Aórtico</strong> a partir de la 4ª vértebra torácica, después de la salida de los grandes troncos arteriales que van hacia los miembros anteriores y la cabeza.</p>
         </div>
         <div>
-            <p><strong>Partes que la conforman:</strong><br>
-                1. <em>Aorta Torácica:</em> Segmento que va desde el Arco Aórtico hasta cruzar el diafragma por el hiato aórtico.<br>
-                2. <em>Aorta Abdominal:</em> Tramo que recorre la cavidad peritoneal hasta dividirse en las arterias ilíacas terminales.
+            <p><strong>Divisiones Principales:</strong><br>
+                1. <em>Porción Torácica:</em> Recorrido mediastínico que emite ramas parietales y viscerales broncoesofágicas.<br>
+                2. <em>Porción Abdominal:</em> Cruza el diafragma e irriga el tracto gastrointestinal, renal y genital.
             </p>
         </div>
     </div>
 
-    <div class="instruccion">💡 Pasa el cursor por encima o toca las tarjetas para voltearlas en 3D y ver sus ramas arteriales</div>
+    <div class="instruccion">💡 Pasa el cursor sobre las tarjetas (o tócalas) para girarlas en 3D y ver la lista de ramas arteriales de cada espécimen</div>
 
     <div class="grid-especies">
         
@@ -220,27 +217,25 @@
                     <span class="badge">Equino</span>
                     <h3 class="animal-title">Caballo (Equus caballus)</h3>
                     <div class="img-container">
-                        <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa52?auto=format&fit=crop&q=80&w=400" alt="Equino">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Sisson_1914_Fig_375_Horse_Heart_and_Aorta.png/435px-Sisson_1914_Fig_375_Horse_Heart_and_Aorta.png" alt="Aorta Equina - Sisson">
                     </div>
                     <div class="detalles">
-                        <strong>Ubicación:</strong> Posición subvertebral izquierda en el tórax y medial en el abdomen.<br>
-                        <strong>Características:</strong> El tronco braquiocefálico es extremadamente largo. Alta elasticidad en la porción torácica para soportar el volumen sistólico durante el galope.
+                        <strong>Particularidad:</strong> Gran desarrollo elástico en la porción torácica. La aorta abdominal corre firmemente unida a la superficie ventral de los cuerpos vertebrales lumbares, ligeramente cargada a la izquierda.
                     </div>
-                    <div class="btn-ver-ramas">Ver Ramas Arteriales 🔄</div>
+                    <div class="btn-ver-ramas">Voltear para ver Ramas 🔄</div>
                 </div>
                 <div class="flip-card-back">
-                    <h4 class="back-title">Principales Ramas (Orden Craneal a Caudal)</h4>
+                    <h4 class="back-title">Ramas de la Aorta Abdominal (Equino)</h4>
                     <ol class="lista-ramas">
-                        <li>Arterias intercostales dorsales (Torácicas)</li>
-                        <li>Arterias lumbares (Segmentarias parietales)</li>
-                        <li><strong>Tronco Celíaco:</strong> (Gástrica izquierda, Hepática, Esplénica)</li>
-                        <li><strong>Arteria Mesentérica Craneal:</strong> (Vital para el intestino grueso)</li>
-                        <li>Arterias Renales (Pares, asimétricas)</li>
-                        <li>Arterias Gonadales (Testiculares / Ováricas)</li>
-                        <li>Arteria Mesentérica Caudal (Menor calibre)</li>
-                        <li>Arterias Ilíacas Externas (Hacia arterias femorales)</li>
-                        <li>Arterias Ilíacas Internas (Región pélvica profunda)</li>
-                        <li>Arteria Sacra Media (Terminación hacia la cola)</li>
+                        <li>Arterias intercostales dorsales y lumbares</li>
+                        <li><strong>Tronco Celíaco:</strong> Se divide de forma trifurcada nítida (Gástrica izquierda, Hepática y Esplénica).</li>
+                        <li><strong>Arteria Mesentérica Craneal:</strong> Enorme calibre (irriga el gran colon equino).</li>
+                        <li>Arterias Renales (Derecha más craneal).</li>
+                        <li>Arterias Gonadales (Arterias testiculares o uterinas ováricas).</li>
+                        <li>Arteria Mesentérica Caudal.</li>
+                        <li>Arterias Ilíacas Externas (Eje del miembro posterior).</li>
+                        <li>Arterias Ilíacas Internas.</li>
+                        <li>Arteria Sacra Media.</li>
                     </ol>
                 </div>
             </div>
@@ -250,29 +245,27 @@
             <div class="flip-card-inner">
                 <div class="flip-card-front">
                     <span class="badge">Bovino</span>
-                    <h3 class="animal-title">Vaca / Toro (Bos taurus)</h3>
+                    <h3 class="animal-title">Rumiantes (Bos taurus)</h3>
                     <div class="img-container">
-                        <img src="https://images.unsplash.com/photo-1570042225831-d98fa7577f1e?auto=format&fit=crop&q=80&w=400" alt="Bovino">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Sisson_1914_Fig_400_Ruminant_Stomach_Vessels.png/500px-Sisson_1914_Fig_400_Ruminant_Stomach_Vessels.png" alt="Arterias Celíacas Bovino">
                     </div>
                     <div class="detalles">
-                        <strong>Ubicación:</strong> Ventral al raquis toracoabdominal, fuertemente unida por tejido conectivo crural.<br>
-                        <strong>Características:</strong> El Tronco Celíaco tiene un diámetro masivo debido a los requerimientos metabólicos del rumen, retículo, omaso y abomaso.
+                        <strong>Particularidad:</strong> El Tronco Celíaco posee modificaciones de ramificación masivas (Ramas ruminales derechas e izquierdas, reticulares y omasofias) para dar soporte al complejo gástrico de cuatro compartimentos.
                     </div>
-                    <div class="btn-ver-ramas">Ver Ramas Arteriales 🔄</div>
+                    <div class="btn-ver-ramas">Voltear para ver Ramas 🔄</div>
                 </div>
                 <div class="flip-card-back">
-                    <h4 class="back-title">Principales Ramas (Orden Craneal a Caudal)</h4>
+                    <h4 class="back-title">Ramas de la Aorta Abdominal (Bovino)</h4>
                     <ol class="lista-ramas">
-                        <li>Arterias intercostales dorsales</li>
-                        <li>Arterias lumbares</li>
-                        <li><strong>Tronco Celíaco Ruminal:</strong> (Irrigación masiva multicompartimental)</li>
-                        <li><strong>Arteria Mesentérica Craneal:</strong> (Irriga el disco intestinal)</li>
-                        <li>Arterias Renales (Ramas ramificadas para riñón lobulado)</li>
-                        <li>Arterias Gonadales (Altamente tortuosas en vacas)</li>
-                        <li>Arteria Mesentérica Caudal</li>
-                        <li>Arterias Ilíacas Externas (Aportan ramas a la ubre)</li>
-                        <li>Arterias Ilíacas Internas</li>
-                        <li>Arteria Sacra Media</li>
+                        <li>Ramas parietales lumbares</li>
+                        <li><strong>Tronco Celíaco Ruminal:</strong> Modificado para irrigar Rumen, Retículo, Omaso y Abomaso.</li>
+                        <li><strong>Arteria Mesentérica Craneal:</strong> Distribución en forma de abanico para el disco intestinal.</li>
+                        <li>Arterias Renales (Destinadas a riñones lobulados).</li>
+                        <li>Arterias Gonadales (Muy sinuosas y flexuosas).</li>
+                        <li>Arteria Mesentérica Caudal.</li>
+                        <li>Arterias Ilíacas Externas.</li>
+                        <li>Arterias Ilíacas Internas.</li>
+                        <li>Arteria Sacra Media (Prolongada hacia el plano coxígeo).</li>
                     </ol>
                 </div>
             </div>
@@ -282,123 +275,6 @@
             <div class="flip-card-inner">
                 <div class="flip-card-front">
                     <span class="badge">Porcino</span>
-                    <h3 class="animal-title">Cerdo (Sus scrofa domesticus)</h3>
+                    <h3 class="animal-title">Cerdo (Sus scrofa)</h3>
                     <div class="img-container">
-                        <img src="https://images.unsplash.com/photo-1604848698030-c434ba08ece1?auto=format&fit=crop&q=80&w=400" alt="Porcino">
-                    </div>
-                    <div class="detalles">
-                        <strong>Ubicación:</strong> Profunda, rodeada por abundante panículo de grasa retroperitoneal.<br>
-                        <strong>Características:</strong> Distribución de las arterias parietales muy simétrica y regular. Los riñones se ubican simétricamente en el mismo plano transversal.
-                    </div>
-                    <div class="btn-ver-ramas">Ver Ramas Arteriales 🔄</div>
-                </div>
-                <div class="flip-card-back">
-                    <h4 class="back-title">Principales Ramas (Orden Craneal a Caudal)</h4>
-                    <ol class="lista-ramas">
-                        <li>Arterias intercostales segmentarias</li>
-                        <li>Arterias lumbares</li>
-                        <li><strong>Tronco Celíaco:</strong> (Para el estómago simple y bazo alargado)</li>
-                        <li>Arteria Mesentérica Craneal</li>
-                        <li>Arterias Renales (Nivel simétrico exacto)</li>
-                        <li>Arterias Gonadales</li>
-                        <li>Arteria Mesentérica Caudal (Para el colon espiral)</li>
-                        <li>Arterias Ilíacas Externas</li>
-                        <li>Arterias Ilíacas Internas</li>
-                        <li>Arteria Sacra Media</li>
-                    </ol>
-                </div>
-            </div>
-        </div>
-
-        <div class="flip-card ave" onclick="this.classList.toggle('active')">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <span class="badge">Aves</span>
-                    <h3 class="animal-title">Gallina / Ave (Gallus gallus)</h3>
-                    <div class="img-container">
-                        <img src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?auto=format&fit=crop&q=80&w=400" alt="Ave">
-                    </div>
-                    <div class="detalles">
-                        <strong>Ubicación:</strong> Denominada Aorta Dorsal, íntimamente fija bajo el complejo óseo del sinsacro.<br>
-                        <strong>¡DIFERENCIA CRÍTICA!:</strong> El arco aórtico embrionario izquierdo desaparece. **El arco funcional gira hacia la DERECHA**.
-                    </div>
-                    <div class="btn-ver-ramas">Ver Ramas Arteriales 🔄</div>
-                </div>
-                <div class="flip-card-back">
-                    <h4 class="back-title">Principales Ramas (Anatomía Aviar Real)</h4>
-                    <ol class="lista-ramas">
-                        <li>Troncos Braquiocefálicos Dobles (Nacen del arco)</li>
-                        <li>Arterias Intercostales delgadas</li>
-                        <li><strong>Arteria Celíaca:</strong> (Proventrículo, molleja, hígado)</li>
-                        <li>Arteria Mesentérica Craneal</li>
-                        <li>Arterias Renales Craneales (Lóbulo anterior del riñón)</li>
-                        <li>Arterias Femorales (Pequeñas, solo para el muslo)</li>
-                        <li>Arterias Renales Medias y Caudales</li>
-                        <li><strong>Arterias Isquiáticas:</strong> ¡La arteria principal de la pata!</li>
-                        <li>Arteria Mesentérica Caudal (Conecta con cloaca)</li>
-                        <li>Arteria Caudal Interna (Hacia la rabadilla)</li>
-                    </ol>
-                    <div class="esquema-ave-arco">
-                        ⚠️ No confundir: En aves la arteria motora principal del miembro posterior es la <strong>Isquiática</strong>, no la femoral.
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="seccion-titulo">Matriz de Diagnóstico Diferencial (Anatomía Comparada)</div>
-    <div class="contenedor-tabla">
-        <table class="tabla-comparativa">
-            <thead>
-                <tr>
-                    <th>Criterio Anatómico</th>
-                    <th>Equino (Caballo)</th>
-                    <th>Bovino (Vaca)</th>
-                    <th>Porcino (Cerdo)</th>
-                    <th>Aves (Gallina)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>Dirección del Arco Aórtico</strong></td>
-                    <td>Izquierda (Siniestro)</td>
-                    <td>Izquierda (Siniestro)</td>
-                    <td>Izquierda (Siniestro)</td>
-                    <td><strong style="color:var(--danger)">Derecha (Dextro)</strong></td>
-                </tr>
-                <tr>
-                    <td><strong>Eje Principal del Miembro Caudal</strong></td>
-                    <td>Arteria Femoral</td>
-                    <td>Arteria Femoral</td>
-                    <td>Arteria Femoral</td>
-                    <td><strong style="color:var(--ave)">Arteria Isquiática</strong></td>
-                </tr>
-                <tr>
-                    <td><strong>Ramas Braquiocefálicas</strong></td>
-                    <td>Tronco común largo</td>
-                    <td>Tronco común ancho</td>
-                    <td>Tronco único</td>
-                    <td><strong>Troncos Dobles (Simétricos)</strong></td>
-                </tr>
-                <tr>
-                    <td><strong>Simetría del Segmento Renal</strong></td>
-                    <td>Asimétrico (Riñón derecho más craneal)</td>
-                    <td>Asimétrico (Riñón izquierdo desplazado)</td>
-                    <td>Totalmente simétricos</td>
-                    <td>Tres pares de arterias (Lóbulos)</td>
-                </tr>
-                <tr>
-                    <td><strong>Terminación de la Aorta</strong></td>
-                    <td>Trifurcación nítida</td>
-                    <td>Cuadrifurcación compacta</td>
-                    <td>Trifurcación regular</td>
-                    <td>Arterias Ilíacas Internas y Caudal</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
-
-</body>
-</html>
+                        <img src="
