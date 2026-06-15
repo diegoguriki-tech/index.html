@@ -130,7 +130,7 @@
         }
         .animal-title { margin: 0 0 10px 0; color: var(--primary); font-size: 1.4em; border-bottom: 1px solid #eee; padding-bottom: 5px; }
         
-        /* Contenedor de Imagen Médica/Anatómica */
+        /* Contenedor de Imagen Médica/Anatómica Segura */
         .img-container {
             height: 220px;
             display: flex;
@@ -146,10 +146,6 @@
             max-height: 100%;
             max-width: 100%;
             object-fit: contain;
-            transition: transform 0.3s;
-        }
-        .img-container:hover img {
-            transform: scale(1.08);
         }
 
         .detalles { font-size: 0.88em; line-height: 1.4; color: #555; }
@@ -211,13 +207,15 @@
 
     <div class="grid-especies">
         
+        <!-- EQUINO -->
         <div class="flip-card equino" onclick="this.classList.toggle('active')">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
                     <span class="badge">Equino</span>
                     <h3 class="animal-title">Caballo (Equus caballus)</h3>
                     <div class="img-container">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Sisson_1914_Fig_375_Horse_Heart_and_Aorta.png/435px-Sisson_1914_Fig_375_Horse_Heart_and_Aorta.png" alt="Aorta Equina - Sisson">
+                        <!-- Enlace optimizado y directo para el sistema aórtico del caballo -->
+                        <img src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA3L2ZyY2F2YV9zeXN0ZW1fb2ZfdGhlX2FvcnRhX29mX2hvcnNlX2FfX2RpYWdyYW1fX3ZpbnRhZ2VfX2lsbHVzdHJhdGlvbi1wbmctcmF3cGl4ZWwuanBn.png" alt="Aorta Equina">
                     </div>
                     <div class="detalles">
                         <strong>Particularidad:</strong> Gran desarrollo elástico en la porción torácica. La aorta abdominal corre firmemente unida a la superficie ventral de los cuerpos vertebrales lumbares, ligeramente cargada a la izquierda.
@@ -241,13 +239,15 @@
             </div>
         </div>
 
+        <!-- BOVINO -->
         <div class="flip-card bovino" onclick="this.classList.toggle('active')">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
                     <span class="badge">Bovino</span>
                     <h3 class="animal-title">Rumiantes (Bos taurus)</h3>
                     <div class="img-container">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Sisson_1914_Fig_400_Ruminant_Stomach_Vessels.png/500px-Sisson_1914_Fig_400_Ruminant_Stomach_Vessels.png" alt="Arterias Celíacas Bovino">
+                        <!-- Esquema del estómago poligástrico y arterias complejas -->
+                        <img src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA3L2ZyY2F2YV9hcnRlcmllc19vZl90aGVfc3RvbWFjaF9vZl9vWF9hX19kaWFncmFtX192aW50YWdlX19pbGx1c3RyYXRpb24tcG5nLXJhd3BpeGVsLmpwZw.png" alt="Arterias Celíacas Bovino">
                     </div>
                     <div class="detalles">
                         <strong>Particularidad:</strong> El Tronco Celíaco posee modificaciones de ramificación masivas (Ramas ruminales derechas e izquierdas, reticulares y omasofias) para dar soporte al complejo gástrico de cuatro compartimentos.
@@ -271,13 +271,15 @@
             </div>
         </div>
 
+        <!-- PORCINO -->
         <div class="flip-card porcino" onclick="this.classList.toggle('active')">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
                     <span class="badge">Porcino</span>
                     <h3 class="animal-title">Cerdo (Sus scrofa)</h3>
                     <div class="img-container">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Sisson_1914_Fig_406_Pig_Kidneys_and_Vessels.png/420px-Sisson_1914_Fig_406_Pig_Kidneys_and_Vessels.png" alt="Aorta y Riñones Porcino">
+                        <!-- Esquema anatómico limpio de órganos lumbares y arterias de porcino -->
+                        <img src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA3L2ZyY2F2YV9raWRuZXlzX2FuZF92ZXNzZWxzX29mX3BpZ19hX19kaWFncmFtX192aW50YWdlX19pbGx1c3RyYXRpb24tcG5nLXJhd3BpeGVsLmpwZw.png" alt="Aorta y Riñones Porcino">
                     </div>
                     <div class="detalles">
                         <strong>Particularidad:</strong> Destaca la simetría casi exacta en el origen de las Arterias Renales izquierda y derecha debido a la posición paralela no desplazada de sus riñones, a diferencia de los carnívoros y equinos.
@@ -301,13 +303,15 @@
             </div>
         </div>
 
+        <!-- AVES -->
         <div class="flip-card ave" onclick="this.classList.toggle('active')">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
                     <span class="badge">Aves</span>
                     <h3 class="animal-title">Aves (Gallus gallus)</h3>
                     <div class="img-container">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Sisson_1914_Fig_518_Bird_Circulation_Schema.png/380px-Sisson_1914_Fig_518_Bird_Circulation_Schema.png" alt="Aorta Dorsal Aves">
+                        <!-- Esquema general circulatorio completo aviar -->
+                        <img src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA3L2ZyY2F2YV9kaWFncmFtX29mX3RoZV9jaXJjdWxhdGlvbl9vZl9hX2JpcmRfYV9fdmludGFnZV9faWxsdXN0cmF0aW9uLXBuZy1yYXdwaXhlbC5wbmc.png" alt="Aorta Dorsal Aves">
                     </div>
                     <div class="detalles">
                         <strong>¡DIFERENCIA CRÍTICA!:</strong> La aorta se denomina Aorta Dorsal. El arco aórtico funcional gira hacia el lado <strong>DERECHO</strong> (dextroaorta). Adosada firmemente bajo el hueso sinsacro.
